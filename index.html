@@ -80,7 +80,7 @@
                 <p class="secondaryText">Comment</p>
               </div>
 
-              <button class="viewBtn">
+              <button class="viewBtn" onclick="openReplyModal()">
                 <div>
                   <img src="img/arrowRightIcon.png" />
                 </div>
@@ -95,7 +95,7 @@
                 <p class="secondaryText">Comment</p>
               </div>
 
-              <button class="viewBtn">
+              <button class="viewBtn" onclick="openReplyModal()">
                 <div>
                   <img src="img/arrowRightIcon.png" />
                 </div>
@@ -170,7 +170,9 @@
               <button class="tabBtn"><p>Past</p></button>
             </div>
 
-            <button class="createEventBtn">Create Event</button>
+            <button class="createEventBtn" onclick="openEventModal()">
+              Create Event
+            </button>
 
             <div class="eventCardContainer">
               <div class="eventCard">
@@ -206,6 +208,56 @@
       </div>
     </div>
 
+    <div id="commentModal" class="modal">
+      <div class="form">
+        <div class="header">
+          <h4>Reply</h4>
+
+          <button onclick="closeReplyModal()">
+            <p>Close</p>
+          </button>
+        </div>
+
+        <div class="inputFieldContainer">
+          <div class="inputField">
+            <p>Reply</p>
+            <input type="text" placeholder="Type your comment here..." />
+          </div>
+        </div>
+
+        <div class="submitBtnContainer">
+          <button class="submitBtn" onclick="submitReplyModal()">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="eventModal" class="modal">
+      <div class="form">
+        <div class="header">
+          <h4>Event</h4>
+
+          <button onclick="closeEventModal()">
+            <p>Close</p>
+          </button>
+        </div>
+
+        <div class="inputFieldContainer">
+          <div class="inputField">
+            <p>Event Name</p>
+            <input type="text" placeholder="ABC Event" />
+          </div>
+
+          <div class="inputField">
+            <p>Event Date</p>
+            <input type="date" />
+          </div>
+        </div>
+
+        <div class="submitBtnContainer">
+          <button class="submitBtn" onclick="submitEventModal()">Submit</button>
+        </div>
+      </div>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>
