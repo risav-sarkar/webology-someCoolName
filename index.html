@@ -9,12 +9,17 @@
   </head>
   <body>
     <div class="navbar shadow">
-      <div class="logoContainer">
-        <img src="img/youtube.png" />
+      <div class="navBarLogoContainer">
+        <button class="sideBarLogoContainer" onclick="openSideBar()">
+          <img src="img/hamburgerIcon.png" />
+        </button>
+        <div class="logoContainer">
+          <img src="img/youtube.png" />
+        </div>
       </div>
 
       <div class="profileContainer">
-        <img src="img/youtube.png" />
+        <img src="img/profileIcon.png" />
       </div>
     </div>
 
@@ -135,9 +140,27 @@
 
           <div class="revenueSection">
             <div class="tabBar">
-              <button class="tabBtn selected"><p>Daily</p></button>
-              <button class="tabBtn"><p>Monthly</p></button>
-              <button class="tabBtn"><p>Yearly</p></button>
+              <button
+                class="tabBtn selected"
+                id="dailyRevenueTab"
+                onclick="selectDailyRevenue()"
+              >
+                <p>Daily</p>
+              </button>
+              <button
+                class="tabBtn"
+                id="monthlyRevenueTab"
+                onclick="selectMonthlyRevenue()"
+              >
+                <p>Monthly</p>
+              </button>
+              <button
+                class="tabBtn"
+                id="yearlyRevenueTab"
+                onclick="selectYearlyRevenue()"
+              >
+                <p>Yearly</p>
+              </button>
             </div>
 
             <div class="revenueChart">
@@ -166,8 +189,20 @@
 
           <div class="eventSection">
             <div class="tabBar">
-              <button class="tabBtn selected"><p>Upcoming</p></button>
-              <button class="tabBtn"><p>Past</p></button>
+              <button
+                class="tabBtn selected"
+                id="upcomingEventTab"
+                onclick="selectUpcomingEvents()"
+              >
+                <p>Upcoming</p>
+              </button>
+              <button
+                class="tabBtn"
+                id="pastEventTab"
+                onclick="selectPastEvents()"
+              >
+                <p>Past</p>
+              </button>
             </div>
 
             <button class="createEventBtn" onclick="openEventModal()">
@@ -214,7 +249,9 @@
           <h4>Reply</h4>
 
           <button onclick="closeReplyModal()">
-            <p>Close</p>
+            <div class="imageContainer">
+              <img src="img/closeIcon.png" />
+            </div>
           </button>
         </div>
 
@@ -237,7 +274,9 @@
           <h4>Event</h4>
 
           <button onclick="closeEventModal()">
-            <p>Close</p>
+            <div class="imageContainer">
+              <img src="img/closeIcon.png" />
+            </div>
           </button>
         </div>
 
@@ -258,6 +297,44 @@
         </div>
       </div>
     </div>
+
+    <div id="sidebar" class="sidebarContainer">
+      <div class="sidebar">
+        <div class="header">
+          <h4>Menu</h4>
+
+          <button onclick="closeSideBar()">
+            <div class="imageContainer">
+              <img src="img/closeIcon.png" />
+            </div>
+          </button>
+        </div>
+
+        <div class="sidebarBtnContainer">
+          <button class="btn">
+            <div class="imageContainer">
+              <img src="img/videoIcon.png" />
+            </div>
+            <p>Videos</p>
+          </button>
+
+          <button class="btn">
+            <div class="imageContainer">
+              <img src="img/analyticsIcon.png" />
+            </div>
+            <p>Analytics</p>
+          </button>
+
+          <button class="btn">
+            <div class="imageContainer">
+              <img src="img/settingsIcon.png" />
+            </div>
+            <p>Settings</p>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script src="js/main.js"></script>
   </body>
 </html>
