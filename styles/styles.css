@@ -3,7 +3,7 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Nunito", sans-serif;
-  background-color: black;
+  background-color: rgb(245, 245, 245);
 }
 
 html {
@@ -38,8 +38,261 @@ button:hover {
   transform: scale(1.05);
 }
 
+img {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
 input {
   transition: 0.3s;
   border: none;
   outline: none;
+}
+
+.shadow, .mainContent .cardContainer2 .eventSection .eventCardContainer .eventCard, .mainContent .cardContainer2 .eventSection .tabBar .selected, .mainContent .cardContainer2 .revenueSection .tabBar .selected {
+  box-shadow: 0px 5px 25px 0px rgba(40, 126, 184, 0.15);
+}
+
+.navbar {
+  height: 70px;
+  background-color: #fff;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logoContainer {
+  display: grid;
+  place-items: center;
+  width: 100px;
+}
+.navbar .profileContainer {
+  display: grid;
+  place-items: center;
+  height: 60px;
+  width: 60px;
+}
+
+.mainContent {
+  padding: 20px;
+}
+.mainContent .heroSection .row {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  place-items: center;
+}
+.mainContent .heroSection .row .bar {
+  height: 50px;
+  width: 1px;
+  background-color: rgb(94, 94, 94);
+}
+.mainContent .heroSection .row .heroCard p {
+  color: rgb(94, 94, 94);
+}
+.mainContent .heroSection .row .heroCard h2 {
+  margin-top: 10px;
+}
+.mainContent .cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  margin-top: 50px;
+}
+.mainContent .cardContainer .card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  border: 1px solid rgb(202, 202, 202);
+}
+.mainContent .cardContainer .card h3 {
+  padding-bottom: 10px;
+}
+.mainContent .cardContainer .subscriberCardContainer {
+  display: grid;
+  gap: 10px;
+}
+.mainContent .cardContainer .subscriberCardContainer .subcriberCard {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: 1px solid rgb(231, 231, 231);
+}
+.mainContent .cardContainer .subscriberCardContainer .subcriberCard .imageContainer {
+  height: 60px;
+  width: 60px;
+}
+.mainContent .cardContainer .subscriberCardContainer .subcriberCard .primaryText {
+  font-weight: 600;
+}
+.mainContent .cardContainer .subscriberCardContainer .subcriberCard .secondaryText {
+  color: rgb(94, 94, 94);
+}
+.mainContent .cardContainer .subscriberCardContainer .subcriberCard .viewBtn {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  height: 100%;
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+@media (max-width: 1000px) {
+  .mainContent .cardContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .mainContent .cardContainer {
+    grid-template-columns: 1fr;
+  }
+}
+.mainContent .cardContainer2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 50px;
+}
+.mainContent .cardContainer2 .card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid rgb(202, 202, 202);
+}
+.mainContent .cardContainer2 .card h3 {
+  padding-bottom: 10px;
+}
+.mainContent .cardContainer2 .revenueSection {
+  margin-top: 20px;
+}
+.mainContent .cardContainer2 .revenueSection .tabBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+.mainContent .cardContainer2 .revenueSection .tabBar .tabBtn {
+  width: 100%;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+.mainContent .cardContainer2 .revenueSection .tabBar .selected {
+  background-color: #fff;
+  border: 1px solid rgb(202, 202, 202);
+}
+.mainContent .cardContainer2 .revenueSection .revenueChart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.mainContent .cardContainer2 .revenueSection .revenueChart .circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 30px solid rgb(28, 210, 0);
+  border-top: 30px solid blue;
+  border-right: 30px solid rgb(224, 220, 18);
+}
+.mainContent .cardContainer2 .revenueSection .revenueChart .colorNameContainer {
+  display: grid;
+  gap: 10px;
+}
+.mainContent .cardContainer2 .revenueSection .revenueChart .colorNameContainer .color {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.mainContent .cardContainer2 .revenueSection .revenueChart .colorNameContainer .color .colorContainer1 {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(28, 210, 0);
+}
+.mainContent .cardContainer2 .revenueSection .revenueChart .colorNameContainer .color .colorContainer2 {
+  height: 20px;
+  width: 20px;
+  background-color: blue;
+}
+.mainContent .cardContainer2 .revenueSection .revenueChart .colorNameContainer .color .colorContainer3 {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(224, 220, 18);
+}
+@media (max-width: 920px) {
+  .mainContent .cardContainer2 .revenueSection .revenueChart {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+.mainContent .cardContainer2 .eventSection {
+  margin-top: 20px;
+}
+.mainContent .cardContainer2 .eventSection .tabBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+.mainContent .cardContainer2 .eventSection .tabBar .tabBtn {
+  width: 100%;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+.mainContent .cardContainer2 .eventSection .tabBar .selected {
+  background-color: #fff;
+  border: 1px solid rgb(202, 202, 202);
+}
+.mainContent .cardContainer2 .eventSection .createEventBtn {
+  color: #fff;
+  background-color: rgb(52, 52, 52);
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+.mainContent .cardContainer2 .eventSection .eventCardContainer {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+.mainContent .cardContainer2 .eventSection .eventCardContainer .eventCard {
+  background-color: #fff;
+  border: 1px solid rgb(231, 231, 231);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.mainContent .cardContainer2 .eventSection .eventCardContainer .eventCard .textContainer {
+  padding: 10px 20px;
+}
+.mainContent .cardContainer2 .eventSection .eventCardContainer .eventCard .eventName {
+  font-weight: 600;
+  font-size: 18px;
+}
+.mainContent .cardContainer2 .eventSection .eventCardContainer .eventCard .eventDate {
+  color: rgb(94, 94, 94);
+  font-size: 14px;
+}
+.mainContent .cardContainer2 .eventSection .eventCardContainer .eventCard .visitorContainer {
+  background-color: rgb(52, 52, 52);
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 5px 10px;
+  font-weight: 600;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  .mainContent .cardContainer2 {
+    grid-template-columns: 1fr;
+  }
 }

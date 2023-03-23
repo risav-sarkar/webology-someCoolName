@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 
+$fontgrey: rgb(94, 94, 94);
 body {
   height: 100%;
   width: 100%;
   font-family: "Nunito", sans-serif;
-  background-color: black;
+  background-color: rgb(245, 245, 245);
 }
 
 html {
@@ -12,6 +13,7 @@ html {
   height: 100%;
   width: 100%;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -39,8 +41,299 @@ button {
   }
 }
 
+img {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
 input {
   transition: 0.3s;
   border: none;
   outline: none;
+}
+
+.shadow {
+  box-shadow: 0px 5px 25px 0px rgba(40, 126, 184, 0.15);
+}
+
+.navbar {
+  height: 70px;
+  background-color: #fff;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logoContainer {
+    display: grid;
+    place-items: center;
+    width: 100px;
+  }
+  .profileContainer {
+    display: grid;
+    place-items: center;
+    height: 60px;
+    width: 60px;
+  }
+}
+
+.mainContent {
+  padding: 20px;
+  .heroSection {
+    .row {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      place-items: center;
+
+      .bar {
+        height: 50px;
+        width: 1px;
+        background-color: $fontgrey;
+      }
+
+      .heroCard {
+        p {
+          color: $fontgrey;
+        }
+        h2 {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .cardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 50px;
+    .card {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 15px;
+      border: 1px solid rgb(202, 202, 202);
+
+      h3 {
+        padding-bottom: 10px;
+      }
+    }
+
+    .subscriberCardContainer {
+      display: grid;
+      gap: 10px;
+
+      .subcriberCard {
+        display: flex;
+        align-items: center;
+        position: relative;
+        gap: 20px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        border: 1px solid rgb(231, 231, 231);
+
+        .imageContainer {
+          height: 60px;
+          width: 60px;
+        }
+
+        .primaryText {
+          font-weight: 600;
+        }
+        .secondaryText {
+          color: $fontgrey;
+        }
+
+        .viewBtn {
+          position: absolute;
+          right: 10px;
+          top: 0;
+          bottom: 0;
+          width: 20px;
+          height: 100%;
+          justify-self: flex-end;
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    .cardContainer {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 700px) {
+    .cardContainer {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .cardContainer2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 50px;
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      border: 1px solid rgb(202, 202, 202);
+
+      h3 {
+        padding-bottom: 10px;
+      }
+    }
+
+    .revenueSection {
+      margin-top: 20px;
+
+      .tabBar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+
+        .tabBtn {
+          width: 100%;
+          padding: 10px 20px;
+          text-align: center;
+          border-radius: 10px;
+        }
+        .selected {
+          background-color: #fff;
+          border: 1px solid rgb(202, 202, 202);
+          @extend .shadow;
+        }
+      }
+
+      .revenueChart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 0;
+        max-width: 500px;
+        margin: 0 auto;
+        .circle {
+          height: 200px;
+          width: 200px;
+          border-radius: 50%;
+          background-color: transparent;
+          border: 30px solid rgb(28, 210, 0);
+          border-top: 30px solid blue;
+          border-right: 30px solid rgb(224, 220, 18);
+        }
+
+        .colorNameContainer {
+          display: grid;
+          gap: 10px;
+
+          .color {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .colorContainer1 {
+              height: 20px;
+              width: 20px;
+              background-color: rgb(28, 210, 0);
+            }
+            .colorContainer2 {
+              height: 20px;
+              width: 20px;
+              background-color: blue;
+            }
+            .colorContainer3 {
+              height: 20px;
+              width: 20px;
+              background-color: rgb(224, 220, 18);
+            }
+          }
+        }
+      }
+      @media (max-width: 920px) {
+        .revenueChart {
+          flex-direction: column;
+          gap: 25px;
+        }
+      }
+    }
+
+    .eventSection {
+      margin-top: 20px;
+
+      .tabBar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+
+        .tabBtn {
+          width: 100%;
+          padding: 10px 20px;
+          text-align: center;
+          border-radius: 10px;
+        }
+        .selected {
+          background-color: #fff;
+          border: 1px solid rgb(202, 202, 202);
+          @extend .shadow;
+        }
+      }
+
+      .createEventBtn {
+        color: #fff;
+        background-color: rgb(52, 52, 52);
+        padding: 10px 20px;
+        border-radius: 15px;
+        margin-top: 20px;
+      }
+
+      .eventCardContainer {
+        display: grid;
+        gap: 10px;
+        margin-top: 20px;
+
+        .eventCard {
+          background-color: #fff;
+          border: 1px solid rgb(231, 231, 231);
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          overflow: hidden;
+
+          @extend .shadow;
+
+          .textContainer {
+            padding: 10px 20px;
+          }
+
+          .eventName {
+            font-weight: 600;
+            font-size: 18px;
+          }
+
+          .eventDate {
+            color: $fontgrey;
+            font-size: 14px;
+          }
+
+          .visitorContainer {
+            background-color: rgb(52, 52, 52);
+            height: 100%;
+            display: grid;
+            place-items: center;
+            padding: 5px 10px;
+            font-weight: 600;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    .cardContainer2 {
+      grid-template-columns: 1fr;
+    }
+  }
 }
